@@ -1,10 +1,11 @@
 import { Router } from "express";
 import { CadastarPET, consultarPET} from '../repository/petRepository.js'
+
 const server = Router();
 
 server.post('/pet/nome', async (req, resp) =>{
     try {
-        const { nome } = req.body;
+        const { nome } = req.query;
 
         const resposta = await CadastarPET(nome);
         resp.send(resposta)

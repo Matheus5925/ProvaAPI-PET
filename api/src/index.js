@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { json } from 'express';
 import cors from 'cors';
 import petController from './controller/petController.js'
 
@@ -6,7 +6,7 @@ import petController from './controller/petController.js'
 const server = express();
 
 server.use(cors());
-server.use(express.json());
+server.use(express.json())
 
 server.use(petController);
 
