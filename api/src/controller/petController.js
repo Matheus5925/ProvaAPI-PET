@@ -9,7 +9,6 @@ server.post('/pet/nome', async (req, resp) =>{
 
         const resposta = await CadastarPET(nome);
         resp.send(resposta)
-        
     } catch (err) {
         resp.status(400).send({
             erro: err.message

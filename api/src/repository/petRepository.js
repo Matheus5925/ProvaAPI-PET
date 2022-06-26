@@ -1,11 +1,12 @@
 import { con } from './connection.js'
 
-export async function CadastarPET(nome) {
+export async function CadastarPET(nome, petId) {
     const comando = `
         insert into tb_pet (nm_pet)
                 values (?)`
 
     const [ linhas ] = await (await con).query(comando, [ nome ])
+    petId = linhas.insertId;
     return linhas;
 }
 
