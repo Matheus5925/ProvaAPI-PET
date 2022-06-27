@@ -11,8 +11,11 @@ export async function CadastarPET(nome, petId) {
 }
 
 export async function consultarPET() {
-    const comando = `select * from tb_pet`
+    const comando = `select
+                        id_pet  id,
+                        nm_pet  nome 
+                    from tb_pet`;
 
-    const [resposta] = await (await con).query(comando)
+    const [ resposta ] = await (await con).query(comando)
     return resposta;
 }

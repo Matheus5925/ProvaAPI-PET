@@ -6,4 +6,6 @@ insert into tb_pet (nm_pet)
         
 
 -- CSU:02 Consultar todos nomes
-select * from tb_pet;
+select id_pet as id,
+		nm_pet as nome 
+from tb_pet;
