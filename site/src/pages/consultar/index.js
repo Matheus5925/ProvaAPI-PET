@@ -27,12 +27,12 @@ export default function Consultar() {
                     </tr>
                 </thead>
                 <tbody>
-                    {pets.map(item =>{
+                    {pets.map(item =>
                         <tr>
                             <td>{item.id}</td>
                             <td>{item.nome}</td>
                         </tr>
-                    })}
+                    )}
                 </tbody>
             </table>
         </main>
